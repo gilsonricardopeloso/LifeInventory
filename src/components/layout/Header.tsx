@@ -47,7 +47,7 @@ function Header({
   }
 
   return (
-    <header className="w-full h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-4 z-10">
+    <header className="fixed top-0 left-0 w-full h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-4 z-30">
       <div className="flex items-center gap-2">
         <SidebarTrigger>
           <Menu className="h-5 w-5" />

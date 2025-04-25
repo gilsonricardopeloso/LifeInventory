@@ -47,7 +47,7 @@ function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <NavLink
-                    to="/"
+                    to="/dashboard"
                     className={({ isActive }) =>
                       isActive
                         ? "flex items-center gap-3 text-primary font-medium"

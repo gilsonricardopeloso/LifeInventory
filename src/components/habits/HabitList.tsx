@@ -133,7 +133,7 @@ function HabitList({
           </UnifiedButton>
         </div>
       ) : (
-        <div className="habit-grid">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {habits.map((habit) => (
             <HabitCard
               key={habit.id}

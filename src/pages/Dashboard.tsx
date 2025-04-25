@@ -71,8 +71,39 @@ function Dashboard() {
           />
         </div>
 
+        {!isMobile && (
+          <div>
+            <h2 className="text-xl font-bold mb-4">Suas Melhores Sequências</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {topHabits.map((habit, index) => (
+                <div
+                  key={habit.id}
+                  className="flex items-center p-4 bg-card border rounded-lg"
+                >
+                  <div className="flex items-center justify-center h-8 w-8 md:h-10 md:w-10 rounded-full bg-primary/10 text-primary mr-4">
+                    {index === 0 ? (
+                      <Flame className="h-4 w-4 md:h-5 md:w-5" />
+                    ) : (
+                      <span className="font-bold">{index + 1}</span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-sm md:text-base">
+                      {habit.name}
+                    </h3>
+                    <p className="text-xs md:text-sm text-muted-foreground flex items-center">
+                      <Flame className="h-3 w-3 md:h-4 md:w-4 mr-1 text-habit-warning" />
+                      {habitStreaks[habit.id] || 0} dias consecutivos
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {!isMobile && <Calendar habits={habits} completions={completions} />}
+          {/*  {!isMobile && <Calendar habits={habits} completions={completions} />} */}
 
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -121,37 +152,6 @@ function Dashboard() {
             </div>
           </div>
         </div>
-
-        {!isMobile && (
-          <div>
-            <h2 className="text-xl font-bold mb-4">Suas Melhores Sequências</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {topHabits.map((habit, index) => (
-                <div
-                  key={habit.id}
-                  className="flex items-center p-4 bg-card border rounded-lg"
-                >
-                  <div className="flex items-center justify-center h-8 w-8 md:h-10 md:w-10 rounded-full bg-primary/10 text-primary mr-4">
-                    {index === 0 ? (
-                      <Flame className="h-4 w-4 md:h-5 md:w-5" />
-                    ) : (
-                      <span className="font-bold">{index + 1}</span>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-sm md:text-base">
-                      {habit.name}
-                    </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground flex items-center">
-                      <Flame className="h-3 w-3 md:h-4 md:w-4 mr-1 text-habit-warning" />
-                      {habitStreaks[habit.id] || 0} dias consecutivos
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </ScrollArea>
   )

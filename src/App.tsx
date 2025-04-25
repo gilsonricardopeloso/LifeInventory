@@ -42,7 +42,7 @@ const ProtectedLayout = (props: {
       />
       <div className="flex flex-1 overflow-hidden">
         <AppSidebar />
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto pt-16">
           <Outlet />
         </main>
       </div>
