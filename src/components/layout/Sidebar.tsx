@@ -7,6 +7,7 @@ import {
   PlusCircle,
   Settings,
   Award,
+  UsersIcon,
 } from "lucide-react"
 import {
   Sidebar,
@@ -23,12 +24,14 @@ import {
 import { useToast } from "@/hooks/use-toast"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { useUnifiedButton } from "@/hooks/useUnifiedButton"
+import { getCurrentUser } from "@/mock-data/users"
 
 function AppSidebar() {
   const { toast } = useToast()
   const { t } = useLanguage()
   const { UnifiedButton } = useUnifiedButton()
   const navigate = useNavigate()
+  const user = getCurrentUser()
 
   return (
     <Sidebar>
@@ -59,6 +62,24 @@ function AppSidebar() {
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
+
+              {user.role === "admin" && (
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild>
+                    <NavLink
+                      to="/users"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "flex items-center gap-3 text-primary font-medium"
+                          : "flex items-center gap-3"
+                      }
+                    >
+                      <UsersIcon className="h-5 w-5" />
+                      <span>Usuários</span>
+                    </NavLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              )}
 
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>

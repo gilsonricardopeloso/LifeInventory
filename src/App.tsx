@@ -25,6 +25,7 @@ import Statistics from "./pages/Statistics"
 import Achievements from "./pages/Achievements"
 import Settings from "./pages/Settings"
 import Landing from "./pages/Landing"
+import Users from "./pages/Users"
 
 const queryClient = new QueryClient()
 
@@ -110,6 +111,7 @@ const AppRoutes = () => {
               <Route path="statistics" element={<Statistics />} />
               <Route path="achievements" element={<Achievements />} />
               <Route path="settings" element={<Settings />} />
+              <Route path="users" element={<Users />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           )}
