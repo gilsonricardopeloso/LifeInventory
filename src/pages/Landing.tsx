@@ -10,6 +10,7 @@ const Landing = ({ onLogin }: LandingProps) => {
     const settings = localStorage.getItem("user-settings")
     if (settings) {
       const { theme } = JSON.parse(settings)
+      console.log(theme)
       document.documentElement.classList.toggle("dark", theme === "dark")
     }
   }, [])
