@@ -1,4 +1,5 @@
-import { Bell, Menu, Moon, Settings, Sun, User, Globe } from "lucide-react"
+import React from "react"
+import { Menu, Moon, Sun, Globe } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import {
@@ -10,7 +11,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { useToast } from "@/hooks/use-toast"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { getCurrentUser } from "@/mock-data/users"
@@ -23,9 +23,12 @@ interface HeaderProps {
 }
 
 function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
-  const { toast } = useToast()
   const { language } = useLanguage()
   const currentUser = getCurrentUser()
+
+  const getLanguageDisplay = () => {
+    return language === "pt-BR" ? "PT" : "EN"
+  }
 
   const getUserInitials = () => {
     return currentUser.name
@@ -34,23 +37,6 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
       .join("")
       .toUpperCase()
   }
-  const handleNotificationClick = () => {
-    toast({
-      title: "Notificações",
-      description: "Função de notificações será implementada em breve!",
-    })
-  }
-
-  const handleUserClick = () => {
-    toast({
-      title: "Perfil do Usuário",
-      description: "Funcionalidade de perfil será implementada em breve!",
-    })
-  }
-
-  const getLanguageDisplay = () => {
-    return language === "pt-BR" ? "PT" : "EN"
-  }
 
   return (
     <header className="w-full h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-4 z-10">
@@ -58,7 +44,7 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
         <SidebarTrigger>
           <Menu className="h-5 w-5" />
         </SidebarTrigger>
-        <h1 className="text-xl font-bold text-primary ml-2">Life Inventory</h1>
+        <h1 className="text-xl font-bold text-primary ml-2">HabitFlow</h1>
       </div>
 
       <div className="flex items-center gap-2">
@@ -68,14 +54,6 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
         </div>
 
         <NotificationPopover />
-
-        <Button variant="ghost" size="icon" onClick={handleUserClick}>
-          <User className="h-5 w-5" />
-        </Button>
-
-        <Button variant="ghost" size="icon" onClick={handleNotificationClick}>
-          <Bell className="h-5 w-5" />
-        </Button>
 
         <Button variant="ghost" size="icon" onClick={toggleTheme}>
           {theme === "light" ? (
@@ -102,11 +80,19 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Perfil</DropdownMenuItem>
-            <DropdownMenuItem>Configurações</DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/profile" className="w-full">
+                Perfil
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/settings" className="w-full">
+                Configurações
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem>Ajuda</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Sair</DropdownMenuItem>
+            <DropdownMenuItem onClick={onLogout}>Sair</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

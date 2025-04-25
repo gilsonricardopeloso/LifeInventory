@@ -1,6 +1,10 @@
 import { LoginForm } from "@/components/auth/LoginForm"
 
-const Landing = () => {
+interface LandingProps {
+  onLogin?: () => void
+}
+
+const Landing = ({ onLogin }: LandingProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-500/10 to-blue-500/10">
       <div className="container mx-auto px-4">
@@ -25,7 +29,7 @@ const Landing = () => {
               <h3 className="text-2xl font-semibold mb-6 text-center">
                 Acesse sua conta
               </h3>
-              <LoginForm />
+              <LoginForm onLogin={onLogin} />
               <p className="text-sm text-center mt-4 text-muted-foreground">
                 Use email: admin@habitflow.com <br />
                 senha: 123456

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { Activity, Award, CheckCheck, CalendarDays, Flame } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -8,7 +9,6 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { useHabitStats } from "@/hooks/use-habit-stats"
 import { useHabitCompletion } from "@/hooks/use-habit-completion"
 import mockData from "@/mock-data"
-import { useState } from "react"
 
 function Dashboard() {
   const [habits] = useState(mockData.habits)
@@ -20,6 +20,14 @@ function Dashboard() {
     habits,
     completions
   )
+
+  useEffect(() => {
+    const settings = localStorage.getItem("user-settings")
+    if (settings) {
+      const { theme } = JSON.parse(settings)
+      document.documentElement.classList.toggle("dark", theme === "dark")
+    }
+  }, [])
 
   // Calcular estatísticas
   const activeHabits = habits.filter((h) => !h.isArchived)

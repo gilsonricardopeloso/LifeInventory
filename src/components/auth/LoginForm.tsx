@@ -5,7 +5,11 @@ import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
 import { mockAuth } from "@/services/mockAuth"
 
-export const LoginForm = () => {
+interface LoginFormProps {
+  onLogin?: () => void
+}
+
+export const LoginForm = ({ onLogin }: LoginFormProps) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -22,6 +26,7 @@ export const LoginForm = () => {
         title: "Login bem-sucedido",
         description: "Bem-vindo ao Live Inventory!",
       })
+      if (onLogin) onLogin()
       navigate("/dashboard") // Explicitly navigate to dashboard
     } catch (error) {
       toast({
