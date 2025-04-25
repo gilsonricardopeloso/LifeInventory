@@ -15,6 +15,7 @@ const mockUsers = [
   {
     id: 1,
     name: "Alice Silva",
+    email: "alice@email.com",
     active: true,
     session: "2h 15m",
     ip: "192.168.0.2",
@@ -24,6 +25,7 @@ const mockUsers = [
   {
     id: 2,
     name: "Bruno Souza",
+    email: "bruno@email.com",
     active: true,
     session: "1h 05m",
     ip: "192.168.0.3",
@@ -33,6 +35,7 @@ const mockUsers = [
   {
     id: 3,
     name: "Carla Lima",
+    email: "carla@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.4",
@@ -42,6 +45,7 @@ const mockUsers = [
   {
     id: 4,
     name: "Daniel Costa",
+    email: "daniel@email.com",
     active: true,
     session: "3h 40m",
     ip: "192.168.0.5",
@@ -51,6 +55,7 @@ const mockUsers = [
   {
     id: 5,
     name: "Eduarda Rocha",
+    email: "eduarda@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.6",
@@ -60,6 +65,7 @@ const mockUsers = [
   {
     id: 6,
     name: "Felipe Alves",
+    email: "felipe@email.com",
     active: true,
     session: "0h 50m",
     ip: "192.168.0.7",
@@ -69,6 +75,7 @@ const mockUsers = [
   {
     id: 7,
     name: "Gabriela Dias",
+    email: "gabriela@email.com",
     active: true,
     session: "4h 10m",
     ip: "192.168.0.8",
@@ -78,6 +85,7 @@ const mockUsers = [
   {
     id: 8,
     name: "Henrique Melo",
+    email: "henrique@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.9",
@@ -87,6 +95,7 @@ const mockUsers = [
   {
     id: 9,
     name: "Isabela Pinto",
+    email: "isabela@email.com",
     active: true,
     session: "2h 00m",
     ip: "192.168.0.10",
@@ -96,6 +105,7 @@ const mockUsers = [
   {
     id: 10,
     name: "João Pedro",
+    email: "joao@email.com",
     active: true,
     session: "1h 30m",
     ip: "192.168.0.11",
@@ -105,6 +115,7 @@ const mockUsers = [
   {
     id: 11,
     name: "Karen Martins",
+    email: "karen@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.12",
@@ -114,6 +125,7 @@ const mockUsers = [
   {
     id: 12,
     name: "Lucas Ferreira",
+    email: "lucas@email.com",
     active: true,
     session: "0h 20m",
     ip: "192.168.0.13",
@@ -123,6 +135,7 @@ const mockUsers = [
   {
     id: 13,
     name: "Marina Teixeira",
+    email: "marina@email.com",
     active: true,
     session: "3h 05m",
     ip: "192.168.0.14",
@@ -132,6 +145,7 @@ const mockUsers = [
   {
     id: 14,
     name: "Nicolas Ramos",
+    email: "nicolas@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.15",
@@ -141,6 +155,7 @@ const mockUsers = [
   {
     id: 15,
     name: "Otávio Borges",
+    email: "otavio@email.com",
     active: true,
     session: "1h 10m",
     ip: "192.168.0.16",
@@ -150,6 +165,7 @@ const mockUsers = [
   {
     id: 16,
     name: "Patrícia Souza",
+    email: "patricia@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.17",
@@ -159,6 +175,7 @@ const mockUsers = [
   {
     id: 17,
     name: "Quésia Lopes",
+    email: "quesia@email.com",
     active: true,
     session: "2h 45m",
     ip: "192.168.0.18",
@@ -168,6 +185,7 @@ const mockUsers = [
   {
     id: 18,
     name: "Rafael Duarte",
+    email: "rafael@email.com",
     active: true,
     session: "0h 55m",
     ip: "192.168.0.19",
@@ -177,6 +195,7 @@ const mockUsers = [
   {
     id: 19,
     name: "Sabrina Castro",
+    email: "sabrina@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.20",
@@ -186,6 +205,7 @@ const mockUsers = [
   {
     id: 20,
     name: "Thiago Nunes",
+    email: "thiago@email.com",
     active: true,
     session: "3h 20m",
     ip: "192.168.0.21",
@@ -195,6 +215,7 @@ const mockUsers = [
   {
     id: 21,
     name: "Ursula Farias",
+    email: "ursula@email.com",
     active: true,
     session: "1h 25m",
     ip: "192.168.0.22",
@@ -204,6 +225,7 @@ const mockUsers = [
   {
     id: 22,
     name: "Vinícius Prado",
+    email: "vinicius@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.23",
@@ -213,6 +235,7 @@ const mockUsers = [
   {
     id: 23,
     name: "Wesley Gomes",
+    email: "wesley@email.com",
     active: true,
     session: "2h 05m",
     ip: "192.168.0.24",
@@ -222,6 +245,7 @@ const mockUsers = [
   {
     id: 24,
     name: "Xuxa Meneghel",
+    email: "xuxa@email.com",
     active: true,
     session: "0h 40m",
     ip: "192.168.0.25",
@@ -231,6 +255,7 @@ const mockUsers = [
   {
     id: 25,
     name: "Yasmin Oliveira",
+    email: "yasmin@email.com",
     active: false,
     session: "-",
     ip: "192.168.0.26",
@@ -240,6 +265,7 @@ const mockUsers = [
   {
     id: 26,
     name: "Zeca Pagodinho",
+    email: "zeca@email.com",
     active: true,
     session: "4h 00m",
     ip: "192.168.0.27",
@@ -280,6 +306,8 @@ export default function Users() {
     const q = search.toLowerCase()
     return (
       user.name.toLowerCase().includes(q) ||
+      user.email.toLowerCase().includes(q) ||
+      user.email.split("@")[1]?.toLowerCase().includes(q) ||
       user.ip.toLowerCase().includes(q) ||
       String(user.habits).includes(q) ||
       String(user.achievements).includes(q)
@@ -354,6 +382,9 @@ export default function Users() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-12 text-xs md:text-sm">ID</TableHead>
+                  <TableHead className="min-w-[160px] text-xs md:text-sm">
+                    Email
+                  </TableHead>
                   <TableHead className="min-w-[120px] text-xs md:text-sm">
                     Nome
                   </TableHead>
@@ -373,6 +404,9 @@ export default function Users() {
                   <TableRow key={user.id}>
                     <TableCell className="text-xs md:text-sm">
                       {user.id}
+                    </TableCell>
+                    <TableCell className="text-xs md:text-sm">
+                      {user.email}
                     </TableCell>
                     <TableCell className="text-xs md:text-sm">
                       {user.name}
