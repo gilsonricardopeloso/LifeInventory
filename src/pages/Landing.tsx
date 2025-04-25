@@ -1,10 +1,19 @@
 import { LoginForm } from "@/components/auth/LoginForm"
+import { useEffect } from "react"
 
 interface LandingProps {
   onLogin?: () => void
 }
 
 const Landing = ({ onLogin }: LandingProps) => {
+  useEffect(() => {
+    const settings = localStorage.getItem("user-settings")
+    if (settings) {
+      const { theme } = JSON.parse(settings)
+      document.documentElement.classList.toggle("dark", theme === "dark")
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-500/10 to-blue-500/10">
       <div className="container mx-auto px-4">
