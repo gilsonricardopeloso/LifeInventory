@@ -1,0 +1,89 @@
+{
+  "menu": {
+    "main": "Principal",
+    "habits": "Hábitos",
+    "calendar": "Calendário",
+    "statistics": "Estatísticas",
+    "configuration": "Configuração",
+    "settings": "Configurações",
+    "achievements": "Conquistas",
+    "newHabit": "Novo Hábito"
+  },
+  "habits": {
+    "title": "Gerenciar Hábitos",
+    "active": "Ativos",
+    "archived": "Arquivados",
+    "noHabits": "Você não tem hábitos arquivados.",
+    "createFirst": "Comece criando seu primeiro hábito",
+    "newHabit": "Novo Hábito",
+    "editHabit": "Editar Hábito",
+    "habitCreated": "Hábito criado",
+    "habitUpdated": "Hábito atualizado",
+    "habitDeleted": "Hábito excluído",
+    "habitCompleted": "Hábito concluído",
+    "successMessage": "Parabéns! Você completou o hábito por hoje.",
+    "daily": "Diário",
+    "weekly": "Semanal",
+    "custom": "Personalizado",
+    "target": "Meta",
+    "reminder": "Lembrete",
+    "category": "Categoria",
+    "categories": {
+      "health": "Saúde",
+      "productivity": "Produtividade",
+      "fitness": "Fitness",
+      "learning": "Aprendizado",
+      "mindfulness": "Bem-estar",
+      "social": "Social",
+      "other": "Outro"
+    }
+  },
+  "calendar": {
+    "title": "Calendário de Hábitos",
+    "allHabits": "Todos os hábitos",
+    "someHabits": "Alguns hábitos",
+    "completionRate": "Taxa de conclusão",
+    "currentStreak": "Sequência atual",
+    "longestStreak": "Maior sequência"
+  },
+  "settings": {
+    "settings": "Configurações",
+    "preferences": "Preferências",
+    "notifications": "Notificações",
+    "notificationsDesc": "Receber notificações sobre seus hábitos",
+    "theme": "Tema",
+    "lightTheme": "Tema Claro",
+    "darkTheme": "Tema Escuro",
+    "language": "Idioma",
+    "themeChanged": "Tema alterado",
+    "themeChangedDesc": "Tema alterado para {theme}.",
+    "darkThemeValue": "escuro",
+    "lightThemeValue": "claro",
+    "languageChanged": "Idioma alterado",
+    "languageChangedDesc": "Idioma alterado para {language}.",
+    "portugueseLanguage": "Português",
+    "englishLanguage": "English"
+  },
+  "statistics": {
+    "title": "Estatísticas",
+    "registeredHabits": "Hábitos Cadastrados",
+    "completedThisWeek": "Concluídos na Semana",
+    "completionRate": "Taxa de Conclusão",
+    "currentStreak": "Sequência Atual",
+    "days": "dias",
+    "weeklyProgress": "Progresso Semanal",
+    "day": "Dia",
+    "progress": "Progresso",
+    "complete": "Completo"
+  },
+  "achievements": {
+    "firstHabit": "Primeiro Hábito",
+    "firstHabitDesc": "Você adicionou seu primeiro hábito!",
+    "fullWeek": "Semana Completa",
+    "fullWeekDesc": "Completou todos os hábitos durante 7 dias!",
+    "routineBuilder": "Produtor de Rotina",
+    "routineBuilderDesc": "Criou 5 hábitos diferentes!",
+    "unlocked": "Desbloqueada",
+    "locked": "Bloqueada"
+  }
+}

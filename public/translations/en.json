@@ -1,0 +1,89 @@
+{
+  "menu": {
+    "main": "Main",
+    "habits": "Habits",
+    "calendar": "Calendar",
+    "statistics": "Statistics",
+    "configuration": "Configuration",
+    "settings": "Settings",
+    "achievements": "Achievements",
+    "newHabit": "New Habit"
+  },
+  "habits": {
+    "title": "Manage Habits",
+    "active": "Active",
+    "archived": "Archived",
+    "noHabits": "You don't have any archived habits.",
+    "createFirst": "Start by creating your first habit",
+    "newHabit": "New Habit",
+    "editHabit": "Edit Habit",
+    "habitCreated": "Habit created",
+    "habitUpdated": "Habit updated",
+    "habitDeleted": "Habit deleted",
+    "habitCompleted": "Habit completed",
+    "successMessage": "Congratulations! You completed the habit for today.",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "custom": "Custom",
+    "target": "Target",
+    "reminder": "Reminder",
+    "category": "Category",
+    "categories": {
+      "health": "Health",
+      "productivity": "Productivity",
+      "fitness": "Fitness",
+      "learning": "Learning",
+      "mindfulness": "Mindfulness",
+      "social": "Social",
+      "other": "Other"
+    }
+  },
+  "calendar": {
+    "title": "Habits Calendar",
+    "allHabits": "All habits",
+    "someHabits": "Some habits",
+    "completionRate": "Completion rate",
+    "currentStreak": "Current streak",
+    "longestStreak": "Longest streak"
+  },
+  "settings": {
+    "settings": "Settings",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "notificationsDesc": "Receive notifications about your habits",
+    "theme": "Theme",
+    "lightTheme": "Light Theme",
+    "darkTheme": "Dark Theme",
+    "language": "Language",
+    "themeChanged": "Theme changed",
+    "themeChangedDesc": "Theme changed to {theme}.",
+    "darkThemeValue": "dark",
+    "lightThemeValue": "light",
+    "languageChanged": "Language changed",
+    "languageChangedDesc": "Language changed to {language}.",
+    "portugueseLanguage": "Portuguese",
+    "englishLanguage": "English"
+  },
+  "statistics": {
+    "title": "Statistics",
+    "registeredHabits": "Registered Habits",
+    "completedThisWeek": "Completed This Week",
+    "completionRate": "Completion Rate",
+    "currentStreak": "Current Streak",
+    "days": "days",
+    "weeklyProgress": "Weekly Progress",
+    "day": "Day",
+    "progress": "Progress",
+    "complete": "Complete"
+  },
+  "achievements": {
+    "firstHabit": "First Habit",
+    "firstHabitDesc": "You added your first habit!",
+    "fullWeek": "Full Week",
+    "fullWeekDesc": "Completed all habits for 7 days!",
+    "routineBuilder": "Routine Builder",
+    "routineBuilderDesc": "Created 5 different habits!",
+    "unlocked": "Unlocked",
+    "locked": "Locked"
+  }
+}

@@ -1,0 +1,109 @@
+
+{
+  "pt-BR": {
+    "menu": {
+      "dashboard": "Dashboard",
+      "habits": "Hábitos",
+      "calendar": "Calendário",
+      "statistics": "Estatísticas",
+      "achievements": "Conquistas",
+      "settings": "Configurações",
+      "newHabit": "Novo Hábito",
+      "profile": "Perfil",
+      "main": "Principal",
+      "actions": "Ações",
+      "configuration": "Configuração"
+    },
+    "achievements": {
+      "firstHabit": "Primeiro Hábito",
+      "firstHabitDesc": "Você adicionou seu primeiro hábito!",
+      "fullWeek": "Semana Completa",
+      "fullWeekDesc": "Completou todos os hábitos durante 7 dias!",
+      "routineBuilder": "Produtor de Rotina",
+      "routineBuilderDesc": "Criou 5 hábitos diferentes!",
+      "unlocked": "Desbloqueada",
+      "locked": "Bloqueada"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Excluir",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar"
+    },
+    "settings": {
+      "settings": "Configurações",
+      "preferences": "Preferências",
+      "notifications": "Notificações",
+      "notificationsDesc": "Receber notificações sobre seus hábitos",
+      "theme": "Tema",
+      "lightTheme": "Tema Claro",
+      "darkTheme": "Tema Escuro",
+      "language": "Idioma",
+      "themeChanged": "Tema alterado",
+      "themeChangedDesc": "Tema alterado para {theme}.",
+      "darkThemeValue": "escuro",
+      "lightThemeValue": "claro",
+      "languageChanged": "Idioma alterado",
+      "languageChangedDesc": "Idioma alterado para {language}.",
+      "portugueseLanguage": "Português",
+      "englishLanguage": "English"
+    },
+    "statistics": {
+      "statistics": "Estatísticas"
+    }
+  },
+  "en-US": {
+    "menu": {
+      "dashboard": "Dashboard",
+      "habits": "Habits",
+      "calendar": "Calendar",
+      "statistics": "Statistics",
+      "achievements": "Achievements",
+      "settings": "Settings",
+      "newHabit": "New Habit",
+      "profile": "Profile",
+      "main": "Main",
+      "actions": "Actions",
+      "configuration": "Configuration"
+    },
+    "achievements": {
+      "firstHabit": "First Habit",
+      "firstHabitDesc": "You added your first habit!",
+      "fullWeek": "Full Week",
+      "fullWeekDesc": "Completed all habits for 7 days!",
+      "routineBuilder": "Routine Builder",
+      "routineBuilderDesc": "Created 5 different habits!",
+      "unlocked": "Unlocked",
+      "locked": "Locked"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "settings": {
+      "settings": "Settings",
+      "preferences": "Preferences",
+      "notifications": "Notifications",
+      "notificationsDesc": "Receive notifications about your habits",
+      "theme": "Theme",
+      "lightTheme": "Light Theme",
+      "darkTheme": "Dark Theme",
+      "language": "Language",
+      "themeChanged": "Theme changed",
+      "themeChangedDesc": "Theme changed to {theme}.",
+      "darkThemeValue": "dark",
+      "lightThemeValue": "light",
+      "languageChanged": "Language changed",
+      "languageChangedDesc": "Language changed to {language}.",
+      "portugueseLanguage": "Portuguese",
+      "englishLanguage": "English"
+    },
+    "statistics": {
+      "statistics": "Statistics"
+    }
+  }
+}
