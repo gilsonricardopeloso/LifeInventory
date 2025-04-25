@@ -14,7 +14,7 @@ const Landing = ({ onLogin }: LandingProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-500/10 to-blue-500/10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <nav className="flex items-center justify-between py-8">
           <h1 className="text-2xl font-bold text-primary">Life Inventory</h1>
         </nav>
