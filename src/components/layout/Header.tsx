@@ -1,6 +1,6 @@
 import React from "react"
 import { Menu, Moon, Sun, Globe } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -15,6 +15,7 @@ import { useLanguage } from "@/contexts/LanguageContext"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { getCurrentUser } from "@/mock-data/users"
 import NotificationPopover from "./NotificationPopover"
+import { useThemeSettings } from "@/hooks/useThemeSettings"
 
 interface HeaderProps {
   toggleTheme: () => void
@@ -22,9 +23,16 @@ interface HeaderProps {
   onLogout: () => void
 }
 
-function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
+function Header({
+  toggleTheme: _toggleTheme,
+  theme: _theme,
+  onLogout,
+}: HeaderProps) {
   const { language } = useLanguage()
   const currentUser = getCurrentUser()
+  const { theme, toggleTheme } = useThemeSettings()
+  const location = useLocation()
+  const isSettingsPage = location.pathname === "/settings"
 
   const getLanguageDisplay = () => {
     return language === "pt-BR" ? "PT" : "EN"
@@ -44,7 +52,7 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
         <SidebarTrigger>
           <Menu className="h-5 w-5" />
         </SidebarTrigger>
-        <h1 className="text-xl font-bold text-primary ml-2">HabitFlow</h1>
+        <h1 className="text-xl font-bold text-primary ml-2">Life Inventory</h1>
       </div>
 
       <div className="flex items-center gap-2">
@@ -55,7 +63,12 @@ function Header({ toggleTheme, theme, onLogout }: HeaderProps) {
 
         <NotificationPopover />
 
-        <Button variant="ghost" size="icon" onClick={toggleTheme}>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleTheme}
+          disabled={isSettingsPage}
+        >
           {theme === "light" ? (
             <Moon className="h-5 w-5" />
           ) : (

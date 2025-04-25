@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import {
   Activity,
   Calendar,
@@ -20,21 +20,15 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
 } from "@/components/ui/sidebar"
-import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { useUnifiedButton } from "@/hooks/useUnifiedButton"
 
 function AppSidebar() {
   const { toast } = useToast()
   const { t } = useLanguage()
-
-  const handleNewHabitClick = () => {
-    toast({
-      title: t("newHabit", "menu"),
-      description:
-        "Função de adicionar hábito será implementada na próxima etapa!",
-    })
-  }
+  const { UnifiedButton } = useUnifiedButton()
+  const navigate = useNavigate()
 
   return (
     <Sidebar>
@@ -158,13 +152,15 @@ function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="p-4">
-        <Button
+        <UnifiedButton
           className="w-full flex items-center gap-2"
-          onClick={handleNewHabitClick}
+          onClick={() =>
+            navigate("/habits", { state: { openAddDialog: true } })
+          }
         >
           <PlusCircle className="h-4 w-4" />
           <span>{t("newHabit", "menu")}</span>
-        </Button>
+        </UnifiedButton>
       </SidebarFooter>
     </Sidebar>
   )
